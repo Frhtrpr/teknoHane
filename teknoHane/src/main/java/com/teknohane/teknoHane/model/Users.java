@@ -20,20 +20,22 @@ public class Users implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-    @Column(name = "eposta")
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "eposta",unique = true)
     private String eposta;
-    @Getter
     @Column(name = "password")
     private String password;
     @Column(name = "phone")
     private String phone;
     @Column(name = "gender")
     private String gender;
-    @Column(name = "birthday")
+    @Column(name = "birthday",unique = true)
     private Date birthday;
     @Column(name = "role")
     private String role;
-
 
     @Override
     public String getUsername() {
@@ -50,29 +52,22 @@ public class Users implements UserDetails {
     }
 
     @Override
-    // Kullanıcı hesabının süresinin dolup dolmadığını .
-    // her zaman true döndürülüyor, yani hesap sürekli geçerli .
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
-    // Kullanıcının hesabının kilitlenip kilitlenmediğini belirten metod.
-    // her zaman true , yani hesap sürekli açık .
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
-    // Kullanıcının kimlik doğrulama bilgilerinin  süresinin dolup dolmadığını .
-    // her zaman true , yani kimlik doğrulama bilgileri sürekli geçerli .
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
-    // Kullanıcının etkinleştirilip etkinleştirilmediğini .
-    // her zaman true , yani kullanıcı hesabı her zaman etkin durumda .
+
     public boolean isEnabled() {
         return true;
     }

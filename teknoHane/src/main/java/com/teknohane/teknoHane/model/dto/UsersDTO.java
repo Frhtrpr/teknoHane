@@ -11,6 +11,8 @@ import java.util.UUID;
 public class UsersDTO {
 
     private Long id;
+    private String firstName;
+    private String lastName;
     private String eposta;
     private String password;
     private String phone;

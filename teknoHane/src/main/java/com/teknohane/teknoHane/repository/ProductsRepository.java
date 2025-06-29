@@ -13,7 +13,7 @@ import java.util.UUID;
 @Repository
 public interface ProductsRepository extends JpaRepository <Products , Long> {
 
-    @Query(value =  "SELECT * FROM teknoHane.products  WHERE category_id = :categoryId", nativeQuery = true)
+    @Query(value =  "SELECT * FROM products  WHERE category_id = :categoryId", nativeQuery = true)
     List<Products> productByCategoryId (@Param("categoryId")Long categoryId);
 
 }

@@ -2,12 +2,17 @@ package com.teknohane.teknoHane.model.mapper;
 
 import com.teknohane.teknoHane.model.Products;
 import com.teknohane.teknoHane.model.dto.ProductDTO;
+import com.teknohane.teknoHane.repository.UsersRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class ProductMapper {
 
-    public static ProductDTO toDTO(Products products){
+    private final UsersRepository userRepository;
+
+    public ProductDTO toDTO(Products products) {
         ProductDTO productDTO = new ProductDTO();
 
         productDTO.setProductId(products.getProductId());
@@ -18,10 +23,18 @@ public class ProductMapper {
         productDTO.setProductInfo(products.getProductInfo());
         productDTO.setStockQuantity(products.getStockQuantity());
         productDTO.setProductImages(products.getProductImages());
+
+        if (products.getSellerId() != null) {
+            userRepository.findById(products.getSellerId()).ifPresent(user -> {
+                String fullName = user.getFirstName() + " " + user.getLastName();
+                productDTO.setSellerName(fullName);
+            });
+        }
+
         return productDTO;
     }
 
-    public static Products toEntity(ProductDTO productDTO){
+    public Products toEntity(ProductDTO productDTO) {
         Products products = new Products();
 
         products.setProductId(productDTO.getProductId());
@@ -32,7 +45,7 @@ public class ProductMapper {
         products.setProductInfo(productDTO.getProductInfo());
         products.setStockQuantity(productDTO.getStockQuantity());
         products.setProductImages(productDTO.getProductImages());
+
         return products;
     }
-
 }

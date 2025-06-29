@@ -21,11 +21,13 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductsRepository productsRepository;
     private final OrderRepository orderRepository;
+    private final ProductMapper productMapper;
+
     @Override
     public List<ProductDTO> getAllProduct() {
         List<Products> product = productsRepository.findAll();
         return product.stream()
-                .map(ProductMapper::toDTO)
+                .map(productMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
@@ -33,30 +35,30 @@ public class ProductServiceImpl implements ProductService {
     public ProductDTO getProductById(Long id) {
         Products products = productsRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
-        return ProductMapper.toDTO(products);
+        return productMapper.toDTO(products);
     }
 
     @Override
     public List<ProductDTO> getAllProductsByCategoryId(Long categoryId) {
         List<Products> products = productsRepository.productByCategoryId(categoryId);
-        return products.stream().map(ProductMapper::toDTO).collect(Collectors.toList());
+        return products.stream().map(productMapper::toDTO).collect(Collectors.toList());
     }
 
     @Override
     public ProductDTO createProduct(ProductDTO productDTO) {
-        Products products = ProductMapper.toEntity(productDTO);
+        Products products = productMapper.toEntity(productDTO);
         products = productsRepository.save(products);
-        return ProductMapper.toDTO(products);
+        return productMapper.toDTO(products);
     }
 
     @Override
     public ProductDTO updateProduct(Long id, ProductDTO productDTO) {
         Products existingProduct = productsRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
-        Products updatedproduct = ProductMapper.toEntity(productDTO);
+        Products updatedproduct = productMapper.toEntity(productDTO);
         updatedproduct.setProductId(existingProduct.getProductId());
         updatedproduct = productsRepository.save(updatedproduct);
-        return ProductMapper.toDTO(updatedproduct);
+        return productMapper.toDTO(updatedproduct);
     }
 
     @Transactional

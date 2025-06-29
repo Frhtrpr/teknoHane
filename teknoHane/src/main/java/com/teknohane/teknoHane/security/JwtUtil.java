@@ -54,7 +54,7 @@ public class JwtUtil {
 
     private String doGenerateToken(String subject, Collection<? extends GrantedAuthority> roles) {
         Claims claims = Jwts.claims().setSubject(subject);
-        claims.put("roles", roles); // Kullanıcı rollerini ekleyin
+        claims.put("roles", roles);
 
         return Jwts.builder()
                 .setClaims(claims)

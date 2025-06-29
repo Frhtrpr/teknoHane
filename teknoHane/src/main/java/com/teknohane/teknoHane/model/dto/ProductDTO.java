@@ -19,6 +19,7 @@ public class ProductDTO {
     private int stockQuantity;
     private String productInfo;
     private Long categoryId;
+    private String sellerName;
     private List<String> productImages;
 
 

@@ -44,6 +44,9 @@ public class Products {
     @Column(name = "category_id")
     private Long categoryId;
 
+    @Column(name = "seller_id")
+    private Long sellerId;
+
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "product_images", joinColumns = @JoinColumn(name = "product_id"))

@@ -35,5 +35,4 @@ public class ProductsDetail {
     @Column(name = "technical_details", columnDefinition = "TEXT")
     private String technicalDetails;
 
-
 }

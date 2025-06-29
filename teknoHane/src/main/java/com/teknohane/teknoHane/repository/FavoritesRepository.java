@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface FavoritesRepository extends JpaRepository <Favorites, Long> {
 
-    @Query(value =  "SELECT * FROM teknoHane.favorites  WHERE user_id = :userId", nativeQuery = true)
+    @Query(value =  "SELECT * FROM favorites  WHERE user_id = :userId", nativeQuery = true)
     List<Favorites> findAllByUserId(@Param("userId") Long userId);
 
     @Modifying

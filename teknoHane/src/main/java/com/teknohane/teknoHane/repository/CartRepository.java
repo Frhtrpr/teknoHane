@@ -14,10 +14,10 @@ import java.util.List;
 @Repository
 public interface CartRepository extends JpaRepository <Cart , Long> {
 
-    @Query(value =  "SELECT * FROM teknoHane.carts  WHERE user_id = :userId", nativeQuery = true)
+    @Query(value =  "SELECT * FROM carts  WHERE user_id = :userId", nativeQuery = true)
     List<Cart> getCartByUserId (@Param("userId")Long userId);
 
     @Modifying
-    @Query(value = "DELETE FROM teknoHane.carts WHERE product_id = :productId",nativeQuery = true)
+    @Query(value = "DELETE FROM carts WHERE product_id = :productId",nativeQuery = true)
     int deleteByProductId(@Param("productId") Long productId);
 }
