@@ -88,6 +88,221 @@ public class DataSeeder implements CommandLineRunner {
                         "• 3200mAh batarya, MagSafe desteği"
         );
         productDetailRepository.save(tel1Detay);
+        Products tel2 = new Products();
+        tel2.setProductName("Samsung Galaxy S24");
+        tel2.setDescription("Yüksek performans, şık tasarım ve güçlü kamera.");
+        tel2.setPrice(40000);
+        tel2.setStockQuantity(15);
+        tel2.setProductInfo("6.2 inç ekran, Exynos 2400 işlemci.");
+        tel2.setCategoryId(telefon.getCategoryId());
+        tel2.setSellerId(1L);
+        tel2.setProductImages(List.of("https://m.media-amazon.com/images/I/61gyimiqfGL.jpg"));
+        tel2 = productRepository.save(tel2);
+
+        ProductsDetail tel2Detay = new ProductsDetail();
+        tel2Detay.setProductId(tel2.getProductId());
+        tel2Detay.setBrand("Samsung");
+        tel2Detay.setModel("Galaxy S24");
+        tel2Detay.setFeatures(
+                "• AMOLED ekran\n" +
+                        "• Yüz tanıma\n" +
+                        "• 120Hz ekran yenileme hızı\n" +
+                        "• IP68 suya dayanıklılık\n" +
+                        "• Kablosuz şarj"
+        );
+        tel2Detay.setTechnicalDetails(
+                "• Exynos 2400 işlemci\n" +
+                        "• 6.2 inç Dynamic AMOLED 2X ekran\n" +
+                        "• 8GB RAM, 256GB depolama\n" +
+                        "• 50MP + 12MP + 10MP üçlü kamera\n" +
+                        "• 4000mAh batarya, 25W hızlı şarj"
+        );
+        productDetailRepository.save(tel2Detay);
+        Products tel3 = new Products();
+        tel3.setProductName("Oppo Reno10 Pro");
+        tel3.setDescription("Şık tasarımıyla dikkat çeken güçlü bir akıllı telefon.");
+        tel3.setPrice(30000);
+        tel3.setStockQuantity(20);
+        tel3.setProductInfo("6.7 inç ekran, Snapdragon 778G işlemci.");
+        tel3.setCategoryId(telefon.getCategoryId());
+        tel3.setSellerId(1L);
+        tel3.setProductImages(List.of("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTLeRDzThgwQqk_orvxyCv3vBFaQm3tIb7Q&s"));
+        tel3 = productRepository.save(tel3);
+
+        ProductsDetail tel3Detay = new ProductsDetail();
+        tel3Detay.setProductId(tel3.getProductId());
+        tel3Detay.setBrand("Oppo");
+        tel3Detay.setModel("Reno10 Pro");
+        tel3Detay.setFeatures(
+                "• AMOLED ekran\n" +
+                        "• Hızlı şarj\n" +
+                        "• Ultra net portre modu\n" +
+                        "• In-display parmak izi sensörü\n" +
+                        "• Hafif ve ince tasarım"
+        );
+        tel3Detay.setTechnicalDetails(
+                "• Snapdragon 778G işlemci\n" +
+                        "• 6.7 inç AMOLED ekran\n" +
+                        "• 12GB RAM, 256GB depolama\n" +
+                        "• 50MP + 32MP + 8MP üçlü kamera\n" +
+                        "• 4600mAh batarya, 80W hızlı şarj"
+        );
+        productDetailRepository.save(tel3Detay);
+        Products tel4 = new Products();
+        tel4.setProductName("iPhone 15");
+        tel4.setDescription("En yeni iPhone modeli, güçlü donanımıyla öne çıkıyor.");
+        tel4.setPrice(50000);
+        tel4.setStockQuantity(8);
+        tel4.setProductInfo("6.1 inç ekran, A17 Pro işlemci.");
+        tel4.setCategoryId(telefon.getCategoryId());
+        tel4.setSellerId(1L);
+        tel4.setProductImages(List.of("https://st-troy.mncdn.com/mnresize/775/775/Content/media/ProductImg/original/mtp43tua-apple-iphone-15-128gb-blue-638305552289935305.jpg"));
+        tel4 = productRepository.save(tel4);
+
+        ProductsDetail tel4Detay = new ProductsDetail();
+        tel4Detay.setProductId(tel4.getProductId());
+        tel4Detay.setBrand("Apple");
+        tel4Detay.setModel("iPhone 15");
+        tel4Detay.setFeatures(
+                "• Dynamic Island\n" +
+                        "• USB-C portu\n" +
+                        "• Geliştirilmiş kamera sistemi\n" +
+                        "• Ceramic Shield\n" +
+                        "• Face ID"
+        );
+        tel4Detay.setTechnicalDetails(
+                "• Apple A17 Pro işlemci\n" +
+                        "• 6.1 inç Super Retina XDR ekran\n" +
+                        "• 6GB RAM, 128GB depolama\n" +
+                        "• 48MP Ana kamera, 12MP Ultra Geniş\n" +
+                        "• 3349mAh batarya, MagSafe desteği"
+        );
+        productDetailRepository.save(tel4Detay);
+
+        Products tel5 = new Products();
+        tel5.setProductName("iPhone 15 Pro");
+        tel5.setDescription("Titanyum gövde, profesyonel kamera sistemi ve A17 Pro gücü.");
+        tel5.setPrice(63000);
+        tel5.setStockQuantity(5);
+        tel5.setProductInfo("6.1 inç ekran, A17 Pro işlemci.");
+        tel5.setCategoryId(telefon.getCategoryId());
+        tel5.setSellerId(1L);
+        tel5.setProductImages(List.of("https://assets.getmobil.com/uploads/56993/getmobil-iphone-15-pro-max-black-titanium-1webp.webp"));
+        tel5 = productRepository.save(tel5);
+
+        ProductsDetail tel5Detay = new ProductsDetail();
+        tel5Detay.setProductId(tel5.getProductId());
+        tel5Detay.setBrand("Apple");
+        tel5Detay.setModel("iPhone 15 Pro");
+        tel5Detay.setFeatures(
+                "• Titanyum tasarım\n" +
+                        "• Action Button\n" +
+                        "• USB-C 3.0 veri aktarımı\n" +
+                        "• ProMotion 120Hz ekran\n" +
+                        "• LiDAR tarayıcı"
+        );
+        tel5Detay.setTechnicalDetails(
+                "• Apple A17 Pro işlemci\n" +
+                        "• 6.1 inç ProMotion OLED ekran\n" +
+                        "• 8GB RAM, 256GB depolama\n" +
+                        "• 48MP + 12MP + 12MP kamera\n" +
+                        "• 3274mAh batarya, MagSafe desteği"
+        );
+        productDetailRepository.save(tel5Detay);
+        Products tel6 = new Products();
+        tel6.setProductName("iPhone 14");
+        tel6.setDescription("Güçlü performans ve etkileyici kamera deneyimi sunar.");
+        tel6.setPrice(40000);
+        tel6.setStockQuantity(10);
+        tel6.setProductInfo("6.1 inç ekran, A15 Bionic işlemci.");
+        tel6.setCategoryId(telefon.getCategoryId());
+        tel6.setSellerId(1L);
+        tel6.setProductImages(List.of("https://cepmarketavm.com/cdn/shop/files/replika-iphone-14-pro-max-5-akillicepmarket.com_7b2960f8-4d65-463e-8a01-6fd22734520d.png?v=1691763463&width=1445"));
+        tel6 = productRepository.save(tel6);
+
+        ProductsDetail tel6Detay = new ProductsDetail();
+        tel6Detay.setProductId(tel6.getProductId());
+        tel6Detay.setBrand("Apple");
+        tel6Detay.setModel("iPhone 14");
+        tel6Detay.setFeatures(
+                "• Ceramic Shield ekran\n" +
+                        "• Fotoğrafik Stiller\n" +
+                        "• Acil SOS ve çarpışma algılama\n" +
+                        "• 5G desteği\n" +
+                        "• Face ID"
+        );
+        tel6Detay.setTechnicalDetails(
+                "• Apple A15 Bionic işlemci\n" +
+                        "• 6.1 inç Super Retina XDR ekran\n" +
+                        "• 6GB RAM, 128GB depolama\n" +
+                        "• 12MP çift kamera sistemi\n" +
+                        "• 3279mAh batarya, MagSafe"
+        );
+        productDetailRepository.save(tel6Detay);
+
+        Products tel7 = new Products();
+        tel7.setProductName("iPhone SE (2022)");
+        tel7.setDescription("Uygun fiyatlı, kompakt tasarım ve güçlü performans.");
+        tel7.setPrice(25000);
+        tel7.setStockQuantity(20);
+        tel7.setProductInfo("4.7 inç ekran, A15 Bionic işlemci.");
+        tel7.setCategoryId(telefon.getCategoryId());
+        tel7.setSellerId(1L);
+        tel7.setProductImages(List.of("https://cdn.cimri.io/image/1000x1000/apple-iphone-se-2022-64gb-kirmizi_581531108.jpg"));
+        tel7 = productRepository.save(tel7);
+
+        ProductsDetail tel7Detay = new ProductsDetail();
+        tel7Detay.setProductId(tel7.getProductId());
+        tel7Detay.setBrand("Apple");
+        tel7Detay.setModel("iPhone SE 2022");
+        tel7Detay.setFeatures(
+                "• Touch ID parmak izi okuyucu\n" +
+                        "• IP67 suya dayanıklılık\n" +
+                        "• Kompakt ve klasik tasarım\n" +
+                        "• 5G bağlantısı"
+        );
+        tel7Detay.setTechnicalDetails(
+                "• Apple A15 Bionic işlemci\n" +
+                        "• 4.7 inç Retina HD ekran\n" +
+                        "• 4GB RAM, 128GB depolama\n" +
+                        "• 12MP arka, 7MP ön kamera\n" +
+                        "• 2018mAh batarya, 18W hızlı şarj"
+        );
+        productDetailRepository.save(tel7Detay);
+
+        Products tel8 = new Products();
+        tel8.setProductName("iPhone 13 Mini");
+        tel8.setDescription("Küçük boyut, büyük performans.");
+        tel8.setPrice(37000);
+        tel8.setStockQuantity(7);
+        tel8.setProductInfo("5.4 inç ekran, A15 Bionic işlemci.");
+        tel8.setCategoryId(telefon.getCategoryId());
+        tel8.setSellerId(1L);
+        tel8.setProductImages(List.of("https://www.apple.com/newsroom/images/product/iphone/geo/Apple_iphone13_hero_geo_09142021_inline.jpg.large.jpg"));
+        tel8 = productRepository.save(tel8);
+
+        ProductsDetail tel8Detay = new ProductsDetail();
+        tel8Detay.setProductId(tel8.getProductId());
+        tel8Detay.setBrand("Apple");
+        tel8Detay.setModel("iPhone 13 Mini");
+        tel8Detay.setFeatures(
+                "• Kompakt tasarım\n" +
+                        "• Face ID\n" +
+                        "• 5G destekli\n" +
+                        "• Ceramic Shield ekran\n" +
+                        "• Gece modu"
+        );
+        tel8Detay.setTechnicalDetails(
+                "• Apple A15 Bionic işlemci\n" +
+                        "• 5.4 inç Super Retina XDR OLED ekran\n" +
+                        "• 4GB RAM, 128GB depolama\n" +
+                        "• 12MP çift kamera sistemi\n" +
+                        "• 2438mAh batarya, MagSafe"
+        );
+        productDetailRepository.save(tel8Detay);
+
+
+        //laptop
         Category laptop = new Category();
         laptop.setCategoryName("Dizüstü Bilgisayarlar");
         laptop.setCategoryDescription("Günlük ve profesyonel kullanım için laptoplar.");
@@ -124,6 +339,97 @@ public class DataSeeder implements CommandLineRunner {
                         "• Yaklaşık 1.3 kg hafif tasarım"
         );
         productDetailRepository.save(laptop1Detay);
+        Products laptop2 = new Products();
+        laptop2.setProductName("ASUS ZenBook 14");
+        laptop2.setDescription("İnce, hafif ve yüksek performanslı bir ultrabook.");
+        laptop2.setPrice(18000);
+        laptop2.setStockQuantity(12);
+        laptop2.setProductInfo("14 inç ekran, AMD Ryzen 7 işlemci.");
+        laptop2.setCategoryId(laptop.getCategoryId());
+        laptop2.setSellerId(1L);
+        laptop2.setProductImages(List.of("https://dlcdnwebimgs.asus.com/gain/26b2a6c1-fa0f-4de9-87e7-3cbde6b4fd77/"));
+        laptop2 = productRepository.save(laptop2);
+
+        ProductsDetail laptop2Detay = new ProductsDetail();
+        laptop2Detay.setProductId(laptop2.getProductId());
+        laptop2Detay.setBrand("ASUS");
+        laptop2Detay.setModel("ZenBook 14");
+        laptop2Detay.setFeatures(
+                "• İnce ve hafif tasarım\n" +
+                        "• Uzun pil ömrü\n" +
+                        "• HDMI, USB-C ve MicroSD desteği\n" +
+                        "• Ergonomik klavye"
+        );
+        laptop2Detay.setTechnicalDetails(
+                "• AMD Ryzen 7 5800U işlemci\n" +
+                        "• 16GB RAM\n" +
+                        "• 1TB SSD depolama\n" +
+                        "• 14\" FHD IPS ekran\n" +
+                        "• Entegre AMD Radeon grafikleri"
+        );
+        productDetailRepository.save(laptop2Detay);
+
+        Products laptop3 = new Products();
+        laptop3.setProductName("Apple MacBook Air M2");
+        laptop3.setDescription("Apple’ın M2 çipli ince ve sessiz dizüstü bilgisayarı.");
+        laptop3.setPrice(28000);
+        laptop3.setStockQuantity(10);
+        laptop3.setProductInfo("13.6 inç Liquid Retina ekran, Apple M2 işlemci.");
+        laptop3.setCategoryId(laptop.getCategoryId());
+        laptop3.setSellerId(1L);
+        laptop3.setProductImages(List.of("https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/mlxw3tu-a_large.jpg"));
+        laptop3 = productRepository.save(laptop3);
+
+        ProductsDetail laptop3Detay = new ProductsDetail();
+        laptop3Detay.setProductId(laptop3.getProductId());
+        laptop3Detay.setBrand("Apple");
+        laptop3Detay.setModel("MacBook Air M2");
+        laptop3Detay.setFeatures(
+                "• M2 çip ile yüksek verimlilik\n" +
+                        "• Sessiz fanless tasarım\n" +
+                        "• MagSafe şarj bağlantısı\n" +
+                        "• Touch ID"
+        );
+        laptop3Detay.setTechnicalDetails(
+                "• Apple M2 çip (8 çekirdek CPU, 10 çekirdek GPU)\n" +
+                        "• 8GB RAM\n" +
+                        "• 256GB SSD\n" +
+                        "• 13.6 inç Liquid Retina ekran\n" +
+                        "• macOS işletim sistemi"
+        );
+        productDetailRepository.save(laptop3Detay);
+
+        Products laptop4 = new Products();
+        laptop4.setProductName("Lenovo ThinkPad X1 Carbon Gen 11");
+        laptop4.setDescription("İş dünyası için ultra hafif, sağlam ve performanslı laptop.");
+        laptop4.setPrice(32000);
+        laptop4.setStockQuantity(8);
+        laptop4.setProductInfo("14 inç ekran, Intel Core i7 işlemci.");
+        laptop4.setCategoryId(laptop.getCategoryId());
+        laptop4.setSellerId(1L);
+        laptop4.setProductImages(List.of("https://platincdn.com/466/pictures/LUPVBWYJNV10162024102756_lenovo-thinkpad-x1-carbon-gen-11-21hm-01.jpg"));
+        laptop4 = productRepository.save(laptop4);
+
+        ProductsDetail laptop4Detay = new ProductsDetail();
+        laptop4Detay.setProductId(laptop4.getProductId());
+        laptop4Detay.setBrand("Lenovo");
+        laptop4Detay.setModel("ThinkPad X1 Carbon Gen 11");
+        laptop4Detay.setFeatures(
+                "• Askeri standartlarda dayanıklılık\n" +
+                        "• Parmak izi okuyucu ve IR kamera\n" +
+                        "• Ultra hafif karbon fiber gövde\n" +
+                        "• Dolby Vision ve Dolby Atmos desteği"
+        );
+        laptop4Detay.setTechnicalDetails(
+                "• Intel Core i7-1355U işlemci\n" +
+                        "• 16GB LPDDR5 RAM\n" +
+                        "• 1TB PCIe Gen4 SSD\n" +
+                        "• 14 inç WUXGA IPS ekran\n" +
+                        "• 57Wh batarya, 65W hızlı şarj"
+        );
+        productDetailRepository.save(laptop4Detay);
+
+
 
 // Tabletler Kategorisi
         Category tablet = new Category();
@@ -163,6 +469,98 @@ public class DataSeeder implements CommandLineRunner {
                         "• Yaklaşık 682g ağırlık"
         );
         productDetailRepository.save(tablet1Detay);
+        Products tablet2 = new Products();
+        tablet2.setProductName("Samsung Galaxy Tab S9 Ultra");
+        tablet2.setDescription("Geniş ekranlı, yüksek performanslı Android tablet.");
+        tablet2.setPrice(18000);
+        tablet2.setStockQuantity(10);
+        tablet2.setProductInfo("14.6 inç AMOLED ekran, Snapdragon 8 Gen 2.");
+        tablet2.setCategoryId(tablet.getCategoryId());
+        tablet2.setSellerId(1L);
+        tablet2.setProductImages(List.of("https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125049604/125049604_0_MC/4c4b7b14.png"));
+        tablet2 = productRepository.save(tablet2);
+
+        ProductsDetail tablet2Detay = new ProductsDetail();
+        tablet2Detay.setProductId(tablet2.getProductId());
+        tablet2Detay.setBrand("Samsung");
+        tablet2Detay.setModel("Galaxy Tab S9 Ultra");
+        tablet2Detay.setFeatures(
+                "• S Pen dahili\n" +
+                        "• IP68 suya ve toza dayanıklı\n" +
+                        "• 120Hz AMOLED ekran\n" +
+                        "• Samsung DeX desteği\n" +
+                        "• Dörtlü hoparlör (AKG)"
+        );
+        tablet2Detay.setTechnicalDetails(
+                "• Snapdragon 8 Gen 2 for Galaxy işlemci\n" +
+                        "• 12GB RAM, 256GB depolama\n" +
+                        "• 14.6 inç WQXGA+ AMOLED ekran\n" +
+                        "• 11200mAh batarya, 45W hızlı şarj\n" +
+                        "• Android 13 işletim sistemi"
+        );
+        productDetailRepository.save(tablet2Detay);
+
+        Products tablet3 = new Products();
+        tablet3.setProductName("Lenovo Tab P12 Pro");
+        tablet3.setDescription("Eğlence ve üretkenlik için güçlü Android tablet.");
+        tablet3.setPrice(14000);
+        tablet3.setStockQuantity(8);
+        tablet3.setProductInfo("12.6 inç AMOLED ekran, Snapdragon 870 işlemci.");
+        tablet3.setCategoryId(tablet.getCategoryId());
+        tablet3.setSellerId(1L);
+        tablet3.setProductImages(List.of("https://p3-ofp.static.pub//fes/cms/2024/05/23/n6d78gf6yukz0nxo8yj3myjp6dyhbn157528.png"));
+        tablet3 = productRepository.save(tablet3);
+
+        ProductsDetail tablet3Detay = new ProductsDetail();
+        tablet3Detay.setProductId(tablet3.getProductId());
+        tablet3Detay.setBrand("Lenovo");
+        tablet3Detay.setModel("Tab P12 Pro");
+        tablet3Detay.setFeatures(
+                "• AMOLED ekran\n" +
+                        "• Kalem desteği (Precision Pen 3)\n" +
+                        "• Klavye bağlantısı\n" +
+                        "• Dolby Vision ve Dolby Atmos desteği\n" +
+                        "• Uzun pil ömrü"
+        );
+        tablet3Detay.setTechnicalDetails(
+                "• Qualcomm Snapdragon 870 işlemci\n" +
+                        "• 8GB RAM, 256GB SSD\n" +
+                        "• 12.6 inç AMOLED ekran, 120Hz\n" +
+                        "• 10200mAh batarya, 30W hızlı şarj\n" +
+                        "• Android 12 işletim sistemi"
+        );
+        productDetailRepository.save(tablet3Detay);
+
+        Products tablet4 = new Products();
+        tablet4.setProductName("Xiaomi Pad 6");
+        tablet4.setDescription("Günlük kullanım ve eğlence için yüksek performanslı tablet.");
+        tablet4.setPrice(11000);
+        tablet4.setStockQuantity(10);
+        tablet4.setProductInfo("11 inç 2.8K ekran, Snapdragon 870 işlemci.");
+        tablet4.setCategoryId(tablet.getCategoryId());
+        tablet4.setSellerId(1L);
+        tablet4.setProductImages(List.of("https://cdn.cimri.io/image/1000x1000/xiaomi-mi-pad-6-256gb-11-inc-tablet-pc_821152351.jpg"));
+        tablet4 = productRepository.save(tablet4);
+
+        ProductsDetail tablet4Detay = new ProductsDetail();
+        tablet4Detay.setProductId(tablet4.getProductId());
+        tablet4Detay.setBrand("Xiaomi");
+        tablet4Detay.setModel("Pad 6");
+        tablet4Detay.setFeatures(
+                "• 144Hz ekran yenileme hızı\n" +
+                        "• Dolby Vision ve Dolby Atmos desteği\n" +
+                        "• Metal gövde\n" +
+                        "• MIUI for Pad arayüzü\n" +
+                        "• Klavye ve kalem desteği"
+        );
+        tablet4Detay.setTechnicalDetails(
+                "• Qualcomm Snapdragon 870 işlemci\n" +
+                        "• 8GB RAM, 256GB depolama\n" +
+                        "• 11 inç 2.8K LCD ekran (2880x1800), 144Hz\n" +
+                        "• 8840mAh batarya, 33W hızlı şarj\n" +
+                        "• Android 13 tabanlı MIUI"
+        );
+        productDetailRepository.save(tablet4Detay);
 
 // Akıllı Saatler Kategorisi
         Category saat = new Category();
