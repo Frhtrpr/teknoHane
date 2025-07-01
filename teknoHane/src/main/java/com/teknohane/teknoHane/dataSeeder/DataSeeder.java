@@ -399,37 +399,6 @@ public class DataSeeder implements CommandLineRunner {
         );
         productDetailRepository.save(laptop3Detay);
 
-        Products laptop4 = new Products();
-        laptop4.setProductName("Lenovo ThinkPad X1 Carbon Gen 11");
-        laptop4.setDescription("İş dünyası için ultra hafif, sağlam ve performanslı laptop.");
-        laptop4.setPrice(32000);
-        laptop4.setStockQuantity(8);
-        laptop4.setProductInfo("14 inç ekran, Intel Core i7 işlemci.");
-        laptop4.setCategoryId(laptop.getCategoryId());
-        laptop4.setSellerId(1L);
-        laptop4.setProductImages(List.of("https://platincdn.com/466/pictures/LUPVBWYJNV10162024102756_lenovo-thinkpad-x1-carbon-gen-11-21hm-01.jpg"));
-        laptop4 = productRepository.save(laptop4);
-
-        ProductsDetail laptop4Detay = new ProductsDetail();
-        laptop4Detay.setProductId(laptop4.getProductId());
-        laptop4Detay.setBrand("Lenovo");
-        laptop4Detay.setModel("ThinkPad X1 Carbon Gen 11");
-        laptop4Detay.setFeatures(
-                "• Askeri standartlarda dayanıklılık\n" +
-                        "• Parmak izi okuyucu ve IR kamera\n" +
-                        "• Ultra hafif karbon fiber gövde\n" +
-                        "• Dolby Vision ve Dolby Atmos desteği"
-        );
-        laptop4Detay.setTechnicalDetails(
-                "• Intel Core i7-1355U işlemci\n" +
-                        "• 16GB LPDDR5 RAM\n" +
-                        "• 1TB PCIe Gen4 SSD\n" +
-                        "• 14 inç WUXGA IPS ekran\n" +
-                        "• 57Wh batarya, 65W hızlı şarj"
-        );
-        productDetailRepository.save(laptop4Detay);
-
-
 
 // Tabletler Kategorisi
         Category tablet = new Category();

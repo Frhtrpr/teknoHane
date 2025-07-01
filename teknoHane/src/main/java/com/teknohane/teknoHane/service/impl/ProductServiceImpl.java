@@ -3,12 +3,16 @@ package com.teknohane.teknoHane.service.impl;
 import com.teknohane.teknoHane.model.Category;
 import com.teknohane.teknoHane.model.Order;
 import com.teknohane.teknoHane.model.Products;
+import com.teknohane.teknoHane.model.Users;
 import com.teknohane.teknoHane.model.dto.ProductDTO;
 import com.teknohane.teknoHane.model.mapper.ProductMapper;
 import com.teknohane.teknoHane.repository.OrderRepository;
 import com.teknohane.teknoHane.repository.ProductsRepository;
 import com.teknohane.teknoHane.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +26,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductsRepository productsRepository;
     private final OrderRepository orderRepository;
     private final ProductMapper productMapper;
+
 
     @Override
     public List<ProductDTO> getAllProduct() {
@@ -47,6 +52,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductDTO createProduct(ProductDTO productDTO) {
         Products products = productMapper.toEntity(productDTO);
+
+        Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (products.getSellerId() == null) {
+            Long loggedUserId = user.getId();
+            products.setSellerId(loggedUserId);
+        }
         products = productsRepository.save(products);
         return productMapper.toDTO(products);
     }
@@ -66,7 +77,6 @@ public class ProductServiceImpl implements ProductService {
         Products product = productsRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("Product not found with id: " + productId));
 
-        // You need to remove associations first
         for (Order order : orderRepository.findAll()) {
             order.getProducts().remove(product);
             orderRepository.save(order);
@@ -75,9 +85,5 @@ public class ProductServiceImpl implements ProductService {
         productsRepository.deleteById(productId);
         return true;
     }
-
-
-
-
 
 }
